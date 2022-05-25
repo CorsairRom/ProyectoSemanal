@@ -11,3 +11,15 @@ def index(request):
         "fecha": fecha,
     }
     return render(request, "crud/index.html", ctx)
+
+
+def sesion(request):
+    
+    
+    return render(request, "crud/sesion.html")
+
+
+def registrar(request):
+    
+    
+    return render(request, "crud/registrar.html")

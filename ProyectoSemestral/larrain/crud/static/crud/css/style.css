@@ -1,0 +1,19 @@
+/* corrousel */
+
+.main-carousel{
+    border: 1px solid rgb(7, 76, 85); 
+    justify-content: center;
+    align-items: center;
+    margin: 2% 25% 0% 25%;
+    border-radius: 10px;
+    
+}
+.carousel-inner{
+    object-position: center center;
+    object-position: cover;
+}
+
+.carousel-item img{
+    height: 55vh;  
+    border-radius: 10px;   
+}

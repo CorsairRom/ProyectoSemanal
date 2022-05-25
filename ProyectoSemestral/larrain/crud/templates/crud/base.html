@@ -13,42 +13,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://drive.google.com/uc?id=1OQBTDcAu80rskqMPfWDLZp219Rk2iEL7">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'crud/css/style.css' %}">
 </head>
 
 
 
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-lg  bg-white clean-navbar">
-        <div class="container">
-            <a class="navbar-brand logo" href="#">Importadora Larraín</a>
-            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
-                <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<body class="">
+    <nav class="navbar navbar-light navbar-expand-lg bg-white clean-navbar">
+       
+        <div class="container"> <img src="https://drive.google.com/uc?id=1RLhtgrUvVwgGdnoC3e6ceHUYZDEM_dBp" alt="logo_empresa" style="max-width:5.8%;height:auto;"><a class="navbar-brand logo" href="#">Importadora Larraín</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Principal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="features.html">OFERTAS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">PRODUCTOS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about-us.html">sobre nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.html">contactenos</a></li>
-                </ul>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'index' %}">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Productos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">Sobre Nosotros</a>
+                    </li>
+                    <a class="nav-link" href="contact-us.html" style="float:right;"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" style="float: left;" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg><b> Carrito</b></a> 
+                      <a class="nav-link"  href="{% url 'sesion' %}"><svg xmlns="http://www.w3.org/2000/svg"style="float: left;" width="15" height="15" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg><b> Login</b></a>
+                </ul>   
             </div>
         </div>
+       
+        <i class="bi bi-person-circle"></i>
     </nav>
+   
+   
+
     
-<h3>Hola A la pagina</h3>
-
-
-
-
     {% block contenido %}
       
       
     {% endblock contenido %}
-
-
-
-
 
     <footer class="page-footer dark">
         <div class="container">

@@ -4,14 +4,95 @@
 
 {% block contenido %}
 
-<h1>Hola a todos</h1>
-<h1>Aqui esta el inicio</h1>
-<br>
-<h4> {{msg}} </h4>
+<div class="container d-flex justify-content-center ">
+    <div class="titulo ">
+      <h3>
+        Bienvenidos a Importadora Larrain
+      </h3>
+    </div>
+  </div>
+  <!-- style="max-width: 400px; max-height: 400px;" -->
+  <!-- carrousel -->
+  <div id="carouselExampleControls" class="carousel slide main-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <img src="{% static 'crud/img/carrusel1.jpg' %}" class="d-block w-100" alt="carrusel1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'crud/img/carrusel2.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'crud/img/carrusel3.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-<h5> la fecha es:
-    {{fecha}}
-</h5>
+  <div class="container margint60 page">
 
-<h4>Aquie va otro</h4>
+    <div>
+      <h1>
+        <p class="text-center mt-4 text-dark">
+          Conocenos nuestras ofertas
+        </p>
+      </h1>
+      <p class="text-center mt-4">
+        Las mejores ofertas en un solo lugar
+      </p>
+    </div>
+  </div>
+  <div class="container mb-4">
+      <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="width: 300px;">
+                <img src="{% static 'crud/img/computadores/oferta1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Computadores</h5>
+                    <p class="card-text">Conoce nuestras ofertas especiales en todo computacion</p>
+                    <a href="#" class="btn btn-primary">Ver oferta</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 300px;">
+                <img src="{% static 'crud/img/herramientas/oferta2.png' %}" class="card-img-top" alt="..." style="min-height: 300px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Herramientas</h5>
+                    <p class="card-text">Las mejores marcas al mejor precio en un solo lugar</p>
+                    <a href="#" class="btn btn-primary">Ver oferta</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 300px;">
+                <img src="{% static 'crud/img/ropa/oferta3.jpg' %}" class="card-img-top" alt="..." style="min-height: 300px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ropa</h5>
+                    <p class="card-text">Todo tu estilo al mejor precio, revisa nuestras ofertas</p>
+                    <a href="#" class="btn btn-primary">Ver oferta</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 300px;">
+                <img src="{% static 'crud/img/navidad/oferta4.jpg' %}" class="card-img-top" alt="..." style="min-height: 300px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Navidad</h5>
+                    <p class="card-text">Todo menaje navideño al mejor precio</p>
+                    <a href="#" class="btn btn-primary">Ver oferta</a>
+                </div>
+            </div>
+          </div>
+
+
+      </div>
+  </div>
+
 {% endblock contenido %}
